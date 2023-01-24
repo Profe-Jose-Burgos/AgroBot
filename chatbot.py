@@ -11,19 +11,11 @@ from selenium.webdriver.common.keys import Keys
 
 model = load_model("chatbot_model.h5")
 biblioteca = json.loads(open("intents.json").read())
-#words = pickle.load(open("words.pkl", "rb"))
-#classes = pickle.load(open("classes.pkl", "rb"))
 
 
-# ## 11. Creación de funciones: limpieza de entrada y binarización de la entrada.
-
-# In[13]:
-
-
-# definir funcion para aplicar tokenization, stemming sobre el string suministrado por el usuario.
-bolsadepalabras = [] # creación de lista vacia para guardar palabras
-clases = []          # creacion de lista para guardar etiquetas de la conversación
-documents = []       # creación de lista para guardar entrada y su correspondiente etiqueta.
+bolsadepalabras = []
+clases = []
+documents = []
 for intent in biblioteca['intents']:
 
     clases.append(intent['tag'])
@@ -34,23 +26,23 @@ for intent in biblioteca['intents']:
 
         documents.append((result, intent['tag']))
 
-pickle.dump(bolsadepalabras, open("bolsadepalabras.pkl", "wb"))  # guarda bolsa de palabras como archivo .pkl
-pickle.dump(clases, open("classes.pkl", "wb"))  # guarda lista de clases como archivo .pkl
+pickle.dump(bolsadepalabras, open("bolsadepalabras.pkl", "wb"))
+pickle.dump(clases, open("classes.pkl", "wb"))
 
 
 from nltk.stem import SnowballStemmer
 
 stemmer = SnowballStemmer('spanish')
 
-ignore_words = ["?", "¿", "!", "¡", "."]  # Lista de simbolos que se desean eliminar.
+ignore_words = ["?", "¿", "!", "¡", "."]
 
-bolsadepalabras2 = []  # definicion de variable auxiliar para guardar el resultado limpio
+bolsadepalabras2 = []
 
-for w in bolsadepalabras:  # iteracion sobre la lista de palabras "bolsadepalabras"
+for w in bolsadepalabras:
     if w not in ignore_words:
-        wprocesada = w.lower()  # convertir a minuscula
-        wprocesada = stemmer.stem(wprocesada)  # para stemmer
-        bolsadepalabras2.append(wprocesada)  # agregar a la lista.
+        wprocesada = w.lower()
+        wprocesada = stemmer.stem(wprocesada)
+        bolsadepalabras2.append(wprocesada)
 
 print("bolsadepalabras2:", bolsadepalabras2)
 
@@ -66,16 +58,16 @@ def cleanEntrada(entradaUsuario):
 def convVector(entradaUsuario, bolsadepalabras):
     entradaUsuario = cleanEntrada(entradaUsuario)
 
-    vectorentrada = [0] * len(bolsadepalabras)  # colocar vector de entrada como ceros
-    for palabra in entradaUsuario:  # loop sobre la entrada del usuario
+    vectorentrada = [0] * len(bolsadepalabras)
+    for palabra in entradaUsuario:
 
-        if palabra in bolsadepalabras:  # verificación si la palabra esta dentro de la bolsa de palabras.
+        if palabra in bolsadepalabras:
 
             indice = bolsadepalabras.index(
-                palabra)  # obtanción del indice de la palabra actual, en la bolsa de palabras
-            vectorentrada[indice] = 1  # asignación de 1 en el vector de entrada para el indice correspondiente.
+                palabra)
+            vectorentrada[indice] = 1
 
-    vectorentrada = np.array(vectorentrada)  # conversión a un arreglo numpy
+    vectorentrada = np.array(vectorentrada)
     return vectorentrada
 
 
@@ -84,18 +76,11 @@ vectorentrada = convVector(entradausuario, bolsadepalabras)
 vectorentrada
 
 
-# ## 12. Prueba de nuestra red neuronal sobre la entra del usuario binarizada.
-
-# In[14]:
-
-
 def gettag(vectorentrada, LIMITE=0):
     vectorsalida = model.predict(np.array([vectorentrada]))[0]
 
-    # cargar los indices y los valores retornados por el modelo
     vectorsalida = [[i, r] for i, r in enumerate(vectorsalida) if r > LIMITE]
 
-    # ordenar salida en funcion de la probabilidad, valor que está contenido en el segundo termino de cada uno de sus elementos.
     vectorsalida.sort(key=lambda x: x[1], reverse=True)
     print(vectorsalida)
 
@@ -106,11 +91,6 @@ def gettag(vectorentrada, LIMITE=0):
 
 
 listEtiquetas = gettag(vectorentrada, LIMITE=0.1)
-listEtiquetas
-
-# ## 13. Función para retornar respuesta.
-
-# In[15]:
 
 
 import random
@@ -132,7 +112,6 @@ def getResponse(listEtiquetas, biblioteca):
     else:
         response = ''
 
-    #print(etiqueta)
     listadediccionarios = biblioteca['intents']
 
     for dicionario in listadediccionarios:
@@ -145,12 +124,6 @@ def getResponse(listEtiquetas, biblioteca):
 
 
 respuesta = getResponse(listEtiquetas, biblioteca)
-respuesta
-
-
-# ## 14. ChatbotRespuesta (integración en una función).
-
-# In[16]:
 
 
 def chatbotRespuesta(entradaUsuario):
@@ -158,16 +131,3 @@ def chatbotRespuesta(entradaUsuario):
     listEtiquetas = gettag(vectorentrada, LIMITE=0)
     respuesta = getResponse(listEtiquetas, biblioteca)
     return respuesta
-
-
-# ## 15. Interacción con el usuario.
-
-# In[17]:
-
-
-#entradaUsuario = ''
-
-#while entradaUsuario != 'exit':
-#    entradaUsuario = input()
-#    respuesta = chatbotRespuesta(entradaUsuario)
-#    print(respuesta)
