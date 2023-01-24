@@ -10,6 +10,13 @@ from selenium.webdriver.chrome.options import Options
 import re
 import time
 
+animals = {
+    'gato',
+    'perro',
+    'ave'
+    }
+
+
 def checkMensajes(usuario):
     try:
         numMens = usuario.find_element(By.CLASS_NAME,"_1pJ9J").text
@@ -55,7 +62,7 @@ while usuariomsg !='exit':
             driver.save_screenshot("C:\screenshot\photo.png")
             format_image()
             tagValues = tag_name()
-
+            state = False
             if "texto" in tagValues:
                 print(tagValues)
                 for solicitud in solicitudes[-4:]:
@@ -71,10 +78,22 @@ while usuariomsg !='exit':
                 time.sleep(3)
                 webdriver.ActionChains(driver).send_keys(Keys.ESCAPE).perform()
             else:
-                print(tagValues)
+                for v in animals:
+                    if v in tagValues:
+                        state = True
+                        result = chatbotRespuesta(v)
 
-                textRespuesta = driver.find_element(By.CLASS_NAME, "_3Uu1_")
-                textRespuesta.send_keys(tagValues)
-                textRespuesta.send_keys(Keys.ENTER)
-                time.sleep(3)
-                webdriver.ActionChains(driver).send_keys(Keys.ESCAPE).perform()
+                if state == True:
+                    print(tagValues)
+                    textRespuesta = driver.find_element(By.CLASS_NAME, "_3Uu1_")
+                    textRespuesta.send_keys(result)
+                    textRespuesta.send_keys(Keys.ENTER)
+                    time.sleep(3)
+                    webdriver.ActionChains(driver).send_keys(Keys.ESCAPE).perform()
+                elif state == False:
+                    print(tagValues)
+                    textRespuesta = driver.find_element(By.CLASS_NAME, "_3Uu1_")
+                    textRespuesta.send_keys(tagValues)
+                    textRespuesta.send_keys(Keys.ENTER)
+                    time.sleep(3)
+                    webdriver.ActionChains(driver).send_keys(Keys.ESCAPE).perform()

@@ -29,9 +29,76 @@ biblioteca = {"intents":
                                   (Keys.SHIFT)+(Keys.ENTER)+(Keys.SHIFT) + '1. Proteccion para cultivos \u2618' +
                                   (Keys.SHIFT)+(Keys.ENTER)+(Keys.SHIFT) + '2. Equipos y herramientas \u2692' +
                                   (Keys.SHIFT)+(Keys.ENTER)+(Keys.SHIFT) + '3. Salud animal \u271A ' +
+                                    (Keys.SHIFT)+(Keys.ENTER)+(Keys.SHIFT) + '4. Jardineria' +
+                                    (Keys.SHIFT)+(Keys.ENTER)+(Keys.SHIFT) + '5. Citas' +
                                 (Keys.SHIFT)+(Keys.ENTER)+(Keys.SHIFT) + (Keys.SHIFT)+(Keys.ENTER)+(Keys.SHIFT) +
                                   'Escriba su opcion *sin el número* a continuacion \u27A1' + (Keys.SHIFT)+(Keys.ENTER)+(Keys.SHIFT) +
                                   'Recuerda que en todo momento puedes cambiar de opcion!'],
+                    "context": [],
+                    },
+
+                    {"tag": "gatos",
+                    "patterns": ['gato', 'gatos', 'felino'],
+                    "responses": ['Has que tu gato tenga el mejor dia de su vida con nuestros servicios de calidad \u27A1' +
+                                  (Keys.SHIFT)+(Keys.ENTER)+(Keys.SHIFT) + 'Seleccione el siguiente enlace para conocer más! https://melopetandgarden.com/gato' +
+                                  (Keys.SHIFT)+(Keys.ENTER)+(Keys.SHIFT) + 'Esperamos serle de ayuda'],
+                    "context": [],
+                    },
+
+                    {"tag": "perros",
+                    "patterns": ['perros', 'perro', 'canino'],
+                    "responses": ['Has que tu perro tenga el mejor dia de su vida con nuestros servicios de calidad \u27A1' +
+                                  (Keys.SHIFT)+(Keys.ENTER)+(Keys.SHIFT) + 'Seleccione el siguiente enlace para conocer más! https://melopetandgarden.com/perro' +
+                                  (Keys.SHIFT)+(Keys.ENTER)+(Keys.SHIFT) + 'Esperamos serle de ayuda'],
+                    "context": [],
+                    },
+
+                    {"tag": "aves",
+                    "patterns": ['ave', 'aves', 'pájaros', 'ala', 'pluma'],
+                    "responses": ['Has que tus aves tenga el mejor dia de su vida con nuestros servicios de calidad \u27A1' +
+                                  (Keys.SHIFT)+(Keys.ENTER)+(Keys.SHIFT) + 'Seleccione el siguiente enlace para conocer más! https://melopetandgarden.com/aves' +
+                                  (Keys.SHIFT)+(Keys.ENTER)+(Keys.SHIFT) + 'Esperamos serle de ayuda'],
+                    "context": [],
+                    },
+
+                    {"tag": "citas",
+                    "patterns": ['citas', 'programas', 'veterinaria', 'peluqueria'],
+                    "responses": ['Buscamos entregar el mejor servicio para que tus mascotas sean los animalitos mas contentos! \u27A1' +
+                                  (Keys.SHIFT)+(Keys.ENTER)+(Keys.SHIFT) + 'Seleccione el siguiente enlace para conocer más! https://melopetandgarden.com/servicios' +
+                                  (Keys.SHIFT)+(Keys.ENTER)+(Keys.SHIFT) + 'Esperamos serle de ayuda'],
+                    "context": [],
+                    },
+
+                    {"tag": "jardineria",
+                    "patterns": ['jardineria', 'jardin', 'flores', 'arbustos'],
+                    "responses": ['Buscamos entregar el mejor servicio para que tengas un jardin bello! Elije entre las siguientes opciones:' +
+                                  (Keys.SHIFT)+(Keys.ENTER)+(Keys.SHIFT) + '1. Potes y adornos' +
+                                  (Keys.SHIFT)+(Keys.ENTER)+(Keys.SHIFT) + '2. Riego' +
+                                  (Keys.SHIFT)+(Keys.ENTER)+(Keys.SHIFT) + '3. Al exterior'],
+                    "context": [],
+                    },
+
+                    {"tag": "adornos",
+                    "patterns": ['adornos', 'potes', 'maceta'],
+                    "responses": ['MELO distribuye diversos tipos de adornos, macetas y potes en todas sus sucursales \u27A1' +
+                                  (Keys.SHIFT)+(Keys.ENTER)+(Keys.SHIFT) + 'Seleccione el siguiente enlace para conocer más! https://melopetandgarden.com/jardineria/accesorios' +
+                                  (Keys.SHIFT)+(Keys.ENTER)+(Keys.SHIFT) + 'Esperamos serle de ayuda'],
+                    "context": [],
+                    },
+
+                    {"tag": "Riego",
+                    "patterns": ['riego', 'aspersora', 'atomizador', 'spray'],
+                    "responses": ['MELO distribuye diversos tipos de riego y atomizadores en todas sus sucursales \u27A1' +
+                                  (Keys.SHIFT)+(Keys.ENTER)+(Keys.SHIFT) + 'Seleccione el siguiente enlace para conocer más! https://melopetandgarden.com/jardineria/riego' +
+                                  (Keys.SHIFT)+(Keys.ENTER)+(Keys.SHIFT) + 'Esperamos serle de ayuda'],
+                    "context": [],
+                    },
+
+                    {"tag": "exterior",
+                    "patterns": ['exterior', 'afueras', 'camping', 'campaña', 'tolda', 'parrilla', 'barbacoa'],
+                    "responses": ['MELO distribuye diversos tipos de camping y parrillas en todas sus sucursales \u27A1' +
+                                  (Keys.SHIFT)+(Keys.ENTER)+(Keys.SHIFT) + 'Seleccione el siguiente enlace para conocer más! https://melopetandgarden.com/jardineria/outdoor' +
+                                  (Keys.SHIFT)+(Keys.ENTER)+(Keys.SHIFT) + 'Esperamos serle de ayuda'],
                     "context": [],
                     },
 

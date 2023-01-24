@@ -40,7 +40,112 @@
                 "Dime tus usos"
             ],
             "responses": [
-                "Puedo recomendarte servicios que entregamos a todos los productores del pais! Elije entre las siguientes opciones:\ue008\ue007\ue0081. Proteccion para cultivos \u2618\ue008\ue007\ue0082. Equipos y herramientas \u2692\ue008\ue007\ue0083. Salud animal \u271a \ue008\ue007\ue008\ue008\ue007\ue008Escriba su opcion *sin el n\u00famero* a continuacion \u27a1\ue008\ue007\ue008Recuerda que en todo momento puedes cambiar de opcion!"
+                "Puedo recomendarte servicios que entregamos a todos los productores del pais! Elije entre las siguientes opciones:\ue008\ue007\ue0081. Proteccion para cultivos \u2618\ue008\ue007\ue0082. Equipos y herramientas \u2692\ue008\ue007\ue0083. Salud animal \u271a \ue008\ue007\ue0084. Jardineria\ue008\ue007\ue0085. Citas\ue008\ue007\ue008\ue008\ue007\ue008Escriba su opcion *sin el n\u00famero* a continuacion \u27a1\ue008\ue007\ue008Recuerda que en todo momento puedes cambiar de opcion!"
+            ],
+            "context": []
+        },
+        {
+            "tag": "gatos",
+            "patterns": [
+                "gato",
+                "gatos",
+                "felino"
+            ],
+            "responses": [
+                "Has que tu gato tenga el mejor dia de su vida con nuestros servicios de calidad \u27a1\ue008\ue007\ue008Seleccione el siguiente enlace para conocer m\u00e1s! https://melopetandgarden.com/gato\ue008\ue007\ue008Esperamos serle de ayuda"
+            ],
+            "context": []
+        },
+        {
+            "tag": "perros",
+            "patterns": [
+                "perros",
+                "perro",
+                "canino"
+            ],
+            "responses": [
+                "Has que tu perro tenga el mejor dia de su vida con nuestros servicios de calidad \u27a1\ue008\ue007\ue008Seleccione el siguiente enlace para conocer m\u00e1s! https://melopetandgarden.com/perro\ue008\ue007\ue008Esperamos serle de ayuda"
+            ],
+            "context": []
+        },
+        {
+            "tag": "aves",
+            "patterns": [
+                "ave",
+                "aves",
+                "p\u00e1jaros",
+                "ala",
+                "pluma"
+            ],
+            "responses": [
+                "Has que tus aves tenga el mejor dia de su vida con nuestros servicios de calidad \u27a1\ue008\ue007\ue008Seleccione el siguiente enlace para conocer m\u00e1s! https://melopetandgarden.com/aves\ue008\ue007\ue008Esperamos serle de ayuda"
+            ],
+            "context": []
+        },
+        {
+            "tag": "citas",
+            "patterns": [
+                "citas",
+                "programas",
+                "veterinaria",
+                "peluqueria"
+            ],
+            "responses": [
+                "Buscamos entregar el mejor servicio para que tus mascotas sean los animalitos mas contentos! \u27a1\ue008\ue007\ue008Seleccione el siguiente enlace para conocer m\u00e1s! https://melopetandgarden.com/servicios\ue008\ue007\ue008Esperamos serle de ayuda"
+            ],
+            "context": []
+        },
+        {
+            "tag": "jardineria",
+            "patterns": [
+                "jardineria",
+                "jardin",
+                "flores",
+                "arbustos"
+            ],
+            "responses": [
+                "Buscamos entregar el mejor servicio para que tengas un jardin bello! Elije entre las siguientes opciones:\ue008\ue007\ue0081. Potes y adornos\ue008\ue007\ue0082. Riego\ue008\ue007\ue0083. Al exterior"
+            ],
+            "context": []
+        },
+        {
+            "tag": "adornos",
+            "patterns": [
+                "adornos",
+                "potes",
+                "maceta"
+            ],
+            "responses": [
+                "MELO distribuye diversos tipos de adornos, macetas y potes en todas sus sucursales \u27a1\ue008\ue007\ue008Seleccione el siguiente enlace para conocer m\u00e1s! https://melopetandgarden.com/jardineria/accesorios\ue008\ue007\ue008Esperamos serle de ayuda"
+            ],
+            "context": []
+        },
+        {
+            "tag": "Riego",
+            "patterns": [
+                "riego",
+                "aspersora",
+                "atomizador",
+                "spray"
+            ],
+            "responses": [
+                "MELO distribuye diversos tipos de riego y atomizadores en todas sus sucursales \u27a1\ue008\ue007\ue008Seleccione el siguiente enlace para conocer m\u00e1s! https://melopetandgarden.com/jardineria/riego\ue008\ue007\ue008Esperamos serle de ayuda"
+            ],
+            "context": []
+        },
+        {
+            "tag": "exterior",
+            "patterns": [
+                "exterior",
+                "afueras",
+                "camping",
+                "campa\u00f1a",
+                "tolda",
+                "parrilla",
+                "barbacoa"
+            ],
+            "responses": [
+                "MELO distribuye diversos tipos de camping y parrillas en todas sus sucursales \u27a1\ue008\ue007\ue008Seleccione el siguiente enlace para conocer m\u00e1s! https://melopetandgarden.com/jardineria/outdoor\ue008\ue007\ue008Esperamos serle de ayuda"
             ],
             "context": []
         },
