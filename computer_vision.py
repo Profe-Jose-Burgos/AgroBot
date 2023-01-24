@@ -33,15 +33,6 @@ These variables are shared by several examples
 images_folder = os.path.join (os.path.dirname(os.path.abspath(__file__)), "images")
 
 remote_image_url = "https://storagesic.blob.core.windows.net/file-holder/Cropped_Image.jpg"
-'''
-END - Quickstart variables
-'''
-
-
-'''
-Tag an Image - remote
-This example returns a tag (key word) for each thing in the image.
-'''
 from selenium.webdriver.common.keys import Keys
 
 
@@ -67,7 +58,4 @@ def tag_name():
             tags.append((Keys.SHIFT) + (Keys.ENTER) + (Keys.SHIFT))
         return tags
     print()
-    '''
-    END - Tag an Image - remote
-    '''
     print("End of Computer Vision quickstart.")

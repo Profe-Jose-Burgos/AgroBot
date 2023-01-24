@@ -278,9 +278,8 @@ for intent in biblioteca['intents']:
 
         documents.append((result, intent['tag']))
 
-pickle.dump(bolsadepalabras, open("bolsadepalabras.pkl", "wb"))  # guarda bolsa de palabras como archivo .pkl
-pickle.dump(clases, open("classes.pkl", "wb"))  # guarda lista de clases como archivo .pkl
-
+pickle.dump(bolsadepalabras, open("bolsadepalabras.pkl", "wb"))
+pickle.dump(clases, open("classes.pkl", "wb"))
 l1 = 'buen dias'
 l2 = 'buen tardes'
 l3 = 'bienvenidos'
@@ -311,11 +310,11 @@ for w in bolsadepalabras:
 bolsadepalabras = [stemmer.stem(w.lower()) for w in bolsadepalabras if w not in ignore_words]
 print(bolsadepalabras)
 
-sentencia = 'HOLAA    como estas?'         # string de entrada
-print(sentencia.split())                   # aplicacion del metodo split para obtener una lista de los elementos por separado.
-sentencia= ' '.join(sentencia.split())     # aplicacion del metodo join para unir la lista anterior
+sentencia = 'HOLAA    como estas?'
+print(sentencia.split())
+sentencia= ' '.join(sentencia.split())
 print(sentencia)
-sentencia = sentencia.lower()              # conversion a minusculas
+sentencia = sentencia.lower()
 print(sentencia)
 
 def cleanString(words, ignore_words):
@@ -351,7 +350,7 @@ model = Sequential()
 
 model.add(Dense(128, input_shape=(len(x_train[0]),), activation='relu'))
 model.add(Dropout(0.5))
-model.add(Dense(64,activation='relu')) #capa oculta -> aprendizaje
+model.add(Dense(64,activation='relu'))
 model.add(Dropout(0.5))
 model.add(Dense(len(y_train[0]),activation='softmax'))
 sgd = SGD(learning_rate=0.01,momentum=0.9,nesterov=True) # ,decay=1e-6
