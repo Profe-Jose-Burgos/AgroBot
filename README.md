@@ -24,8 +24,7 @@ Para ejecutar el codigo, se debe configurar los puertos de enlace a los servicio
 
 # Vistas del funcionamiento
 Saludo del chatbot
-![image]([https://user-images.githubusercontent.com/120022842/214435343-f0a33f3f-f263-4afe-b02a-7aa9d6ef1957.png](https://github.com/favicon.ico](https://user-images.githubusercontent.com/120022842/213750891-ba2e7e45-9197-44bc-9fc5-7bad4039b093.png))
-
+![image](https://user-images.githubusercontent.com/120022842/214455978-65b641b6-aece-4a99-867e-87d1b3c1a404.png)
 
 Servicios entregados por el chatbot
 ![image](https://user-images.githubusercontent.com/120022842/214435343-f0a33f3f-f263-4afe-b02a-7aa9d6ef1957.png)
@@ -37,4 +36,3 @@ Chatbot empleado los servicios de OpenWeatherMap
 Vision artificial - reconocimiento de imágenes
 ![image](https://user-images.githubusercontent.com/120022842/214435880-ad07346e-bf59-4793-b52d-48409f2cfa81.png)
 ![image](https://user-images.githubusercontent.com/120022842/214435831-feed338d-3bf3-49b1-9196-8fc0cd612dbe.png)
-
