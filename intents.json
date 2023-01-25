@@ -8,7 +8,7 @@
                 "buenas tardes"
             ],
             "responses": [
-                "Hola soy Chick-BOT \u263a el ayudante N\u00b01 de Productos MELO. \u00bfComo puedo ayudarte? \u2b50 \nPreguntame sobre mis usos!"
+                "Hola soy GreenBOT \u263a el ayudante N\u00b01 de Servicios MELO. \u00bfComo puedo ayudarte? \u2b50 \nPreguntame sobre mis usos!"
             ],
             "context": [
                 ""
@@ -360,7 +360,7 @@
                 ""
             ],
             "responses": [
-                "No se detecto una respuesta \u2639"
+                "No se detecto una respuesta \u2639 Por favor vuelva a consultar las funciones"
             ],
             "context": [
                 ""

@@ -13,7 +13,7 @@ def guardar_json(datos, filename):
 biblioteca = {"intents":
                   [{"tag": "saludos",
                     "patterns": ['hola', 'buenos dias', 'buenas tardes'],
-                    "responses": [f'Hola soy Chick-BOT \u263A el ayudante N°1 de Productos MELO. ¿Como puedo ayudarte? \u2B50 \nPreguntame sobre mis usos!'],
+                    "responses": [f'Hola soy GreenBOT \u263A el ayudante N°1 de Servicios MELO. ¿Como puedo ayudarte? \u2B50 \nPreguntame sobre mis usos!'],
                     "context": [""]
                     },
 
@@ -252,11 +252,9 @@ biblioteca = {"intents":
                     "responses": ['Recomendamos cultivar con el abono Nutrex Produccion 19-9-19 por alto contenido en nitrógeno, y medio en fósforo y potasio, es adecuado para cultivos sensibles, mejorando la calidad de la planta del arroz \u2618'],
                     "context": [],
                     },
-
-
-                   {"tag": "norespuesta",
+                   {"tag": "norespuesta", #Manejo de excepciones
                     "patterns": [""],
-                    "responses": ["No se detecto una respuesta \u2639"
+                    "responses": ["No se detecto una respuesta \u2639 Por favor vuelva a consultar las funciones"
                                   ],
                     "context": [""]
                     }
